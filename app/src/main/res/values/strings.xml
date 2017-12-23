@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">RabattRechner</string>
     <string name="action_settings">Settings</string>
+    <string name="btn_1">Prozent von einem Betrag berechnen</string>
+    <string name="txt_gesamt">Bitte geben Sie den Gesamtpreis ein</string>
+    <string name="txt_prozent">Prozent</string>
+    <string name="txt_ergebnis">Ergebnis</string>
+    <string name="btn_beenden">Beenden</string>
+    <string name="btn_clear">Leeren</string>
 </resources>

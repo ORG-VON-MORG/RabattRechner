@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+
+
     }
 
     @Override
@@ -48,5 +52,29 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void onClick(View v){
+        EditText grundwert = (EditText)findViewById(R.id.txt_grundwert);
+        EditText prozentsatz = (EditText)findViewById(R.id.txt_prozet);
+        EditText prozentwert = (EditText)findViewById(R.id.txt_ergebnis);
+
+
+        switch(v.getId()){
+
+            case R.id.btn_ok: /** Start a new Activity MyCards.java */
+
+                break;
+
+            case R.id.btn_exit: /** AlerDialog when click on Exit */
+                System.exit(0);
+                break;
+
+            case R.id.btn_clear:
+                grundwert.getText().clear();
+                prozentsatz.getText().clear();
+                prozentwert.getText().clear();
+                break;
+        }
     }
 }
