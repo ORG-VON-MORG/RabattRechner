@@ -10,18 +10,21 @@ package com.google.tobias.gottschalk.rabattrechner;
 
 
 
-public class berechnungRabatt {
+public class RabattRechner {
 
     public double berechneProzentwert(double grundwert, double prozentsatz){
-        prozentsatz = prozentsatz/100;
+        //prozentsatz = prozentsatz/100;
 
         if(prozentsatz>=0){
-            grundwert = grundwert*(prozentsatz/(100))+grundwert;
+            grundwert = grundwert*(prozentsatz/100) + grundwert;
+
         }
 
-        if (prozentsatz<0){
-            grundwert = grundwert*(prozentsatz/(100))-grundwert;
+        if(prozentsatz<0){
+            grundwert = grundwert*(prozentsatz/100) + grundwert;
         }
+
+
         return grundwert;
     }
 

@@ -7,4 +7,9 @@
     <string name="txt_ergebnis">Ergebnis</string>
     <string name="btn_beenden">Beenden</string>
     <string name="btn_clear">Leeren</string>
+
+    <string-array name="spinnerlist">
+        <item>Minderung</item>
+        <item>Erhöhung</item>
+    </string-array>
 </resources>
