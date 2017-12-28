@@ -95,23 +95,34 @@ public class MainActivity extends AppCompatActivity {
                     Toast toast = Toast.makeText(context, text, duration);
                     toast.show();
                 }
-
+                //Prozentwert berechnen
                 if(grundwertEditText.length()>0 && prozentsatzEditText.length()>0 && prozentwertEditText.length()==0){
-
-
-
-                   // grundwert = Double.parseDouble(grundwertEditText.getText().toString());
 
                     temp = rabattRechner.berechneProzentwert(Double.parseDouble(
                             grundwertEditText.getText().toString()),
                             Double.parseDouble(prozentsatzEditText.getText().toString()));
 
-
                     prozentwertEditText.setText(temp.toString());
 
                 }
 
+                //Grundwert berechnen
+                if(grundwertEditText.length()==0 && prozentsatzEditText.length()>0 && prozentwertEditText.length()>0){
 
+                    temp = rabattRechner.berechneGrundwert(Double.parseDouble(prozentwertEditText.getText().toString()),
+                            Double.parseDouble(prozentsatzEditText.getText().toString()));
+
+                    grundwertEditText.setText(temp.toString());
+                }
+
+
+                //Prozentsatz berechnen
+                if(grundwertEditText.length()>0 && prozentsatzEditText.length()==0 && prozentwertEditText.length()>0){
+                    temp = rabattRechner.berechneProzentsatz(Double.parseDouble(prozentwertEditText.getText().toString()),
+                           Double.parseDouble(grundwertEditText.getText().toString()));
+
+                    prozentsatzEditText.setText(temp.toString());
+                }
 
 
                 break;
