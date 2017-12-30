@@ -66,6 +66,11 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
 
+        if(id==R.id.menu_exit){
+            System.exit(0);
+        }
+
+
         return super.onOptionsItemSelected(item);
     }
 
